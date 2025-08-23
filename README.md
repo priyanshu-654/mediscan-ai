@@ -40,8 +40,9 @@ python -m venv .venv
 ### Install dependencies
 pip install -r requirements.txt
 
-Run the app
+[Run the app
 streamlit run app.py
+http://192.168.1.103:8501
 
 
 
