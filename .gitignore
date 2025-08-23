@@ -1,0 +1,33 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+# Environments
+.venv/
+venv/
+env/
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+# Jupyter
+.ipynb_checkpoints/
+# Builds
+build/
+dist/
+*.egg-info/
+# Logs / temp
+*.log
+*.tmp
+# Streamlit secrets
+.streamlit/secrets.toml
+# Data / Models (keep big files out of git; use LFS if needed)
+data/
+datasets/
+models/
+*.h5
+*.pkl
+*.pt
+*.onnx
+# Cache
+.cache/
