@@ -1,4 +1,4 @@
-# MediScan AI: Smart Disease Diagnosis & Health Tracker
+# MediScan AI: Smart Disease Diagnosis & Health Tracker App
 
 MediScan AI is a **Streamlit-based web app** that predicts **Diabetes, Heart Disease, and Parkinson’s** using Machine Learning models.  
 It also provides preventive suggestions, secure health report downloads, nearby doctor suggestions, and more — making it a smart health companion.
