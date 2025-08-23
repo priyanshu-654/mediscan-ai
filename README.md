@@ -42,7 +42,31 @@ pip install -r requirements.txt
 
 [Run the app
 streamlit run app.py
+[🔗 Open MediScan App (local)](http://192.168.1.103:8501)
 http://192.168.1.103:8501
+
+---
+
+## 📂 Project Structure
+mediscan-ai/
+│── app.py                  # Main Streamlit app
+│── requirements.txt        # Python dependencies
+│── README.md               # Documentation
+│── LICENSE                 # License file
+│
+├── models/                 # ML models
+├── data/                   # Datasets
+├── utils/                  # Helper functions
+├── assets/                 # Images, logos
+└── reports/                # Generated reports
+
+---
+
+Screenshots
+
+
+
+
 
 
 
