@@ -64,6 +64,15 @@ mediscan-ai/
 
 Screenshots
 
+<img width="907" height="851" alt="Screenshot 2025-08-23 122532" src="https://github.com/user-attachments/assets/b4625b6d-c5fd-465e-930b-7af0b5a02644" />
+<img width="1888" height="897" alt="Screenshot 2025-08-23 122423" src="https://github.com/user-attachments/assets/329bb006-6bd5-4672-b61c-68177509a8c7" />
+<img width="1907" height="870" alt="Screenshot 2025-08-23 122741" src="https://github.com/user-attachments/assets/4a10bf4f-140c-4a44-b5a0-565f5e4c7f17" />
+<img width="1912" height="871" alt="Screenshot 2025-08-23 122810" src="https://github.com/user-attachments/assets/e7358430-648d-4820-8a55-2ae96e3c474a" />
+
+
+
+
+
 
 
 
