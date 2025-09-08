@@ -116,9 +116,12 @@ Documentation file with project details.
 
 ## 🧑‍💻 Author
 
-[<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" /> Visit Priyanshu's GitHub](https://github.com/priyanshu-654)
+## 🧑‍💻 Author
 
-
+<a href="https://github.com/priyanshu-654" target="_blank" style="display: inline-block; background-color: #24292f; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; font-family: Arial, sans-serif;">
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" style="vertical-align: middle; margin-right: 8px;" />
+    Visit Priyanshu's GitHub
+</a>
 
 
 
