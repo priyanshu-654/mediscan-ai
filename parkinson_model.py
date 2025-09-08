@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 @st.cache_resource
 def load_parkinson_model():
-    df = pd.read_csv('C:/Users/priya/OneDrive/Desktop/mediscan-ai/data/parkinson.csv')
+    df = pd.read_csv('./data/parkinson.csv')
     df = df.drop(['name'], axis=1)  # Drop 'name' if exists
     X = df.drop('status', axis=1)
     y = df['status']
