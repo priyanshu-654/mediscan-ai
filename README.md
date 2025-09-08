@@ -114,7 +114,11 @@ File to store user feedback.
 ## README.md: 
 Documentation file with project details.
 
+## 🧑‍💻 Author
 
+[<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" /> Visit Priyanshu's GitHub](https://github.com/priyanshu-654)
+
+```
 
 
 
