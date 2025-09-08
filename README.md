@@ -83,9 +83,27 @@ mediscan-ai/
 └── reports/                # Generated reports
 
 ---
+```
 
+📂 Repository Structure
 
+app.py: Main Flask application file.
 
+diabetes_model.py, heart_model.py, parkinson_model.py: Scripts containing the trained models for each disease prediction.
+
+pdf_generator.py: Script for generating PDF reports.
+
+requirements.txt: Lists the necessary Python packages.
+
+utils.py: Contains utility functions used across the application.
+
+data/: Directory for storing datasets.
+
+reports/: Directory for saving generated reports.
+
+feedback.txt: File to store user feedback.
+
+README.md: Documentation file with project details.
 
 
 
