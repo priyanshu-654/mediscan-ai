@@ -45,8 +45,8 @@ if st.session_state["authenticated"]:
         "✅ Diabetes Prediction",
         "✅ Heart Disease Prediction",
         "✅ Parkinson’s Prediction",
-        "📝 Submit Feedback",
-        "🗺️ Nearby Help"
+        "🗺️ Nearby Help",
+        "📝 Submit Feedback"
     ])
 
     if choice == "✅ Diabetes Prediction":
@@ -58,6 +58,49 @@ if st.session_state["authenticated"]:
     elif choice == "✅ Parkinson’s Prediction":
         parkinson_prediction()
 
+    # ------------------------
+    # Nearby Help Section
+    # ------------------------
+    elif choice == "🗺️ Nearby Help":
+        st.subheader("Find Nearby Help 🏥")
+
+        # Added "Hospitals" here
+        search_choice = st.selectbox(
+            "What do you want to search?",
+            ["Doctors", "Clinics", "Hospitals", "Medical Stores"]
+        )
+        location = st.text_input("Optional: enter a city or address (leave blank for 'near me')")
+
+        # Build search query
+        if location.strip():
+            query_text = f"{search_choice} near {location.strip()}"
+        else:
+            query_text = f"{search_choice} near me"
+
+        encoded_query = urllib.parse.quote_plus(query_text)
+        google_maps_url = f"https://www.google.com/maps/search/{encoded_query}"
+
+        # Button (local open)
+        if st.button("Open Google Maps (local)"):
+            try:
+                opened = webbrowser.open(google_maps_url)
+                if opened:
+                    st.success("Opening Google Maps in your browser...")
+                else:
+                    st.info("Could not open browser automatically. Use the link below ⬇️")
+            except Exception:
+                st.error("Browser opening not supported on this server. Use the link below ⬇️")
+
+        # Always show link (works everywhere, including Streamlit Cloud)
+        st.markdown(
+            f'<a href="{google_maps_url}" target="_blank" rel="noopener noreferrer">'
+            "➡️ Open Google Maps in a new tab</a>",
+            unsafe_allow_html=True
+        )
+
+    # ------------------------
+    # Feedback Section
+    # ------------------------
     elif choice == "📝 Submit Feedback":
         st.subheader("💬 Feedback")
         feedback = st.text_area("Leave your feedback here...")
@@ -78,45 +121,7 @@ if st.session_state["authenticated"]:
                 time.sleep(1)
                 st.rerun()  # Force app to show login form again
             else:
-                st.warning("⚠️ Please enter your feedback before submitting.") 
-
-    # ------------------------
-    # Nearby Help Feature
-    # ------------------------
-    elif choice == "🗺️ Nearby Help":
-        st.subheader("Find Nearby Help 🏥")
-
-        # UI
-        search_choice = st.selectbox("What do you want to search?", ["Doctors", "Clinics", "Medical Stores"])
-        location = st.text_input("Optional: enter a city or address (leave blank for 'near me')")
-
-        # Build query
-        if location.strip():
-            query_text = f"{search_choice} near {location.strip()}"
-        else:
-            query_text = f"{search_choice} near me"
-
-        encoded_query = urllib.parse.quote_plus(query_text)
-        google_maps_url = f"https://www.google.com/maps/search/{encoded_query}"
-
-        # Button that tries to open browser (works on local dev)
-        if st.button("Open Google Maps (local)"):
-            try:
-                opened = webbrowser.open(google_maps_url)
-                if opened:
-                    st.success("Attempted to open Google Maps in a browser tab. Check your browser.")
-                else:
-                    st.info("Could not open a browser from the server. Use the link below.")
-            except Exception as e:
-                st.error("Couldn't open the browser on the server. Use the link below.")
-                st.write(e)
-
-        # Always show a clickable link (works for hosted apps / mobile)
-        st.markdown(
-            f'<a href="{google_maps_url}" target="_blank" rel="noopener noreferrer">'
-            "➡️ Open Google Maps in a new tab</a>",
-            unsafe_allow_html=True
-        )
+                st.warning("⚠️ Please enter your feedback before submitting.")
 
         # Optional: show the actual URL for debugging
         st.caption(google_maps_url)
